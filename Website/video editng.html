@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Editing Services - Sujit</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Pacifico&family=Bebas+Neue&display=swap');
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            background: url('https://i.ytimg.com/vi/lkqyHdmUpBY/maxresdefault.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            font-size: 3rem;
+            font-weight: bold;
+            text-shadow: 0 0 20px #ffcc00, 0 0 30px #ff0000;
+            font-family: 'Orbitron', sans-serif;
+            animation: glow 1.5s infinite alternate;
+        }
+        @keyframes glow {
+            0% { text-shadow: 0 0 20px #ffcc00, 0 0 30px #ff0000; }
+            100% { text-shadow: 0 0 30px #ffffff, 0 0 40px #ffcc00; }
+        }
+        .container {
+            display: flex;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .images {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-right: 30px;
+        }
+        .images img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+            transform: perspective(1000px) rotateY(-15deg) scale(1.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .images img:hover {
+            transform: perspective(1000px) rotateY(0deg) scale(1.2);
+        }
+        .content {
+            flex: 1;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+        }
+        h2 {
+            text-align: center;
+            color: #ffcc00;
+            font-family: 'Pacifico', cursive;
+            font-size: 2rem;
+            animation: flicker 1.5s infinite alternate;
+        }
+        @keyframes flicker {
+            0% { opacity: 1; }
+            100% { opacity: 0.7; }
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            font-size: 1.4rem;
+            padding: 10px;
+            font-family: 'Bebas Neue', cursive;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            text-shadow: 0 0 10px #ff0000;
+            animation: textBlink 2s infinite alternate;
+        }
+        @keyframes textBlink {
+            0% { color: #ff0000; }
+            100% { color: #ffcc00; }
+        }
+        .contact {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .contact a {
+            color: #ff7e5f;
+            font-size: 1.7rem;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+            text-shadow: 0 0 20px #ff7e5f, 0 0 30px #ffcc00;
+            animation: pulse 1.5s infinite alternate;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+        .contact a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>🔥 Video Editing Services 🔥</header>
+    <div class="container">
+        <div class="images">
+            <img src="https://img.freepik.com/free-vector/gradient-business-presentation-template_23-2149263626.jpg?semt=ais_hybrid" alt="Presentation Template">
+            <img src="https://images.iskysoft.com/filmora-video-editor/filter.jpg" alt="Filmora Filters">
+            <img src="https://cdn.prod.website-files.com/5fac161927bf86485ba43fd0/6630e3a43fef39b4ddf4d8cb_Blog%20Cover_2024_02_How%20to%20Setup%20A%20Home%20Video%20Studio%20for%20HD%20Recordings%20-%207%20Steps.webp" alt="Video Studio Setup">
+        </div>
+        <div class="content">
+            <h2>Why Choose Me?</h2>
+            <ul>
+                <li>✔️ 3+ Years of Professional Editing Experience</li>
+                <li>✔️ High-Quality Cinematic Editing</li>
+                <li>✔️ Instagram Reels & Short Videos - ₹500</li>
+                <li>✔️ Long Videos - ₹800</li>
+                <li>✔️ Thumbnail & PPT Creation</li>
+                <li>✔️ Ads, YouTube Content & Vlogs</li>
+                <li>✔️ Education & Corporate Video Editing</li>
+                <li>✔️ Custom Video Editing on Request</li>
+            </ul>
+            <div class="contact">
+                📞 <a href="tel:+918210617323">+91 8210617323</a>  
+                📸 <a href="https://www.instagram.com/trader_sujit_12/" target="_blank">@trader_sujit_12</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

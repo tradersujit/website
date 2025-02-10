@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Home Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: url('https://wallpapers-clan.com/wp-content/uploads/2024/09/astronaut-observes-the-vastness-of-space-desktop-wallpaper-preview.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+            padding: 20px;
+        }
+        .container, .home {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            border-radius: 20px;
+            width: 450px;
+            text-align: center;
+            color: white;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+        }
+        input, button {
+            width: 100%;
+            padding: 16px;
+            margin: 14px 0;
+            border: none;
+            border-radius: 10px;
+            outline: none;
+        }
+        button {
+            background: linear-gradient(45deg, #ff416c, #ff4b2b);
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            transition: 0.3s;
+            box-shadow: 0 6px 12px rgba(255, 75, 43, 0.5);
+            border-radius: 12px;
+        }
+        button:hover {
+            transform: scale(1.1);
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        .nav button {
+            width: auto;
+            padding: 12px 25px;
+            background: linear-gradient(45deg, #2193b0, #6dd5ed);
+            font-size: 18px;
+            color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.4);
+            transition: 0.3s;
+        }
+        .nav button:hover {
+            background: linear-gradient(45deg, #6dd5ed, #2193b0);
+            transform: scale(1.05);
+        }
+        .info {
+            margin-top: 25px;
+            font-size: 16px;
+            line-height: 1.8;
+            font-family: 'Arial', sans-serif;
+            text-align: left;
+            color: #ffcc00;
+        }
+        .toggle {
+            cursor: pointer;
+            color: #ffcc00;
+            margin-top: 10px;
+        }
+        .toggle:hover {
+            text-decoration: underline;
+        }
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+        .image-container img {
+            width: 350px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            transform: perspective(500px) rotateY(10deg);
+            transition: transform 0.3s ease;
+        }
+        .image-container img:hover {
+            transform: perspective(500px) rotateY(0deg) scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container" id="formContainer">
+        <h2>Login</h2>
+        <input type="email" id="email" placeholder="Email ID">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+        <p class="toggle" onclick="toggleForm()">Don't have an account? Sign Up</p>
+        <p id="message" class="message"></p>
+    </div>
+
+    <div class="home">
+        <div class="nav">
+            <button>Home</button>
+            <button>About</button>
+            <button>Contact</button>
+            <button>Services</button>
+        </div>
+        <h2 style="color: #ffcc00;">Home Page</h2>
+        <p style="color: #6dd5ed;">Welcome to My Portfolio</p>
+        <div class="info">
+            <p><strong>Trading:</strong> Experienced in analyzing market trends and executing profitable trades.</p>
+            <p><strong>Video Editing:</strong> Skilled in creating engaging and professional-quality videos.</p>
+            <p><strong>Web Development:</strong> Designing interactive and visually appealing websites.</p>
+        </div>
+    </div>
+
+    <div class="image-container">
+        <img src="https://t3.ftcdn.net/jpg/03/54/17/86/360_F_354178616_uSdqA6i1A1vkkskFPKOoxQOED0ZMIcn3.jpg" alt="3D UI Design">
+        <img src="https://png.pngtree.com/thumb_back/fh260/background/20230930/pngtree-optimizing-user-interface-a-3d-rendering-of-web-page-interface-design-image_13558270.png" alt="Optimized UI">
+        <img src="https://png.pngtree.com/background/20250103/original/pngtree-reimagining-website-interface-design-enhancing-user-experience-with-web-design-and-picture-image_13376441.jpg" alt="Website UI Design">
+    </div>
+
+    <script>
+        function toggleForm() {
+            let container = document.getElementById("formContainer");
+            if (container.innerHTML.includes("Login")) {
+                container.innerHTML = `
+                    <h2>Sign Up</h2>
+                    <input type="email" id="signupEmail" placeholder="Email ID">
+                    <input type="password" id="signupPassword" placeholder="Create Password">
+                    <button onclick="signup()">Sign Up</button>
+                    <p class="toggle" onclick="toggleForm()">Already have an account? <b>Login</b></p>
+                `;
+            } else {
+                container.innerHTML = `
+                    <h2>Login</h2>
+                    <input type="email" id="email" placeholder="Email ID">
+                    <input type="password" id="password" placeholder="Password">
+                    <button onclick="login()">Login</button>
+                    <p class="toggle" onclick="toggleForm()">Don't have an account? <b>Sign Up</b></p>
+                    <p id="message" class="message"></p>
+                `;
+            }
+        }
+
+        function login() {
+            document.getElementById("message").innerText = "Sorry, this is just an example.";
+        }
+
+        function signup() {
+            document.getElementById("message").innerText = "Sorry, this is just an example.";
+        }
+    </script>
+</body>
+</html>
