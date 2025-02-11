@@ -12,8 +12,9 @@
         }
         body {
             background: url('https://wallpapers-clan.com/wp-content/uploads/2024/09/astronaut-observes-the-vastness-of-space-desktop-wallpaper-preview.jpg') no-repeat center center/cover;
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
             justify-content: center;
             gap: 50px;
@@ -23,7 +24,8 @@
             background: rgba(0, 0, 0, 0.7);
             padding: 40px;
             border-radius: 20px;
-            width: 450px;
+            width: 100%;
+            max-width: 450px;
             text-align: center;
             color: white;
             backdrop-filter: blur(20px);
@@ -51,6 +53,7 @@
         }
         .nav {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             gap: 15px;
             margin-bottom: 25px;
@@ -90,9 +93,12 @@
             flex-direction: column;
             gap: 15px;
             align-items: center;
+            width: 100%;
+            max-width: 450px;
         }
         .image-container img {
-            width: 350px;
+            width: 100%;
+            max-width: 350px;
             border-radius: 15px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
             transform: perspective(500px) rotateY(10deg);

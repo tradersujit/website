@@ -12,64 +12,60 @@
         }
         body {
             background: url('https://png.pngtree.com/background/20250104/original/pngtree-optimizing-user-interface-a-3d-rendering-of-web-page-interface-design-picture-image_13273333.jpg') no-repeat center center/cover;
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-direction: row;
+            flex-wrap: wrap;
             text-align: center;
             padding: 20px;
             color: white;
         }
-        .container {
+        .container, .info-box {
             background: rgba(0, 0, 0, 0.7);
             padding: 40px;
             border-radius: 15px;
             backdrop-filter: blur(15px);
             box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-            width: 550px;
-        }
-        .info-box {
-            background: rgba(0, 0, 0, 0.7);
-            padding: 30px;
-            border-radius: 15px;
-            backdrop-filter: blur(15px);
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-            margin-left: 30px;
-            width: 300px;
+            width: 100%;
+            max-width: 550px;
+            margin: 10px;
         }
         h1 {
-            font-size: 32px;
+            font-size: 5vw; /* Responsive font size */
             font-family: 'Arial Black', sans-serif;
             color: #ffcc00;
             text-shadow: 2px 2px 10px rgba(255, 204, 0, 0.9);
         }
         p {
-            font-size: 18px;
+            font-size: 1.2em;
             font-family: 'Poppins', sans-serif;
             margin: 10px 0;
             line-height: 1.6;
         }
         .pricing {
             margin-top: 20px;
-            font-size: 22px;
+            font-size: 1.4em;
             font-weight: bold;
             font-family: 'Courier New', monospace;
             color: #6dd5ed;
         }
+        .button {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
         .button a {
-            display: inline-block;
-            padding: 15px 35px;
+            padding: 12px 25px;
             background: linear-gradient(45deg, #ff416c, #ff4b2b);
             color: white;
             text-decoration: none;
-            font-size: 20px;
+            font-size: 1em;
             font-family: 'Verdana', sans-serif;
             font-weight: bold;
             border-radius: 10px;
             box-shadow: 0 6px 15px rgba(255, 75, 43, 0.6);
             transition: 0.3s;
-            margin-top: 20px;
         }
         .button a:hover {
             transform: scale(1.1);
@@ -77,10 +73,24 @@
         .highlight {
             color: #ffcc00;
             font-weight: bold;
-            font-size: 20px;
         }
         .email {
-            font-size: 14px;
+            font-size: 0.9em;
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 6vw;
+            }
+            .container, .info-box {
+                padding: 20px;
+            }
+            .pricing {
+                font-size: 1.2em;
+            }
+            .button a {
+                font-size: 0.9em;
+                padding: 10px 20px;
+            }
         }
     </style>
 </head>
